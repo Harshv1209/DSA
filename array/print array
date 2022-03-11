@@ -1,0 +1,14 @@
+int main()
+{
+    int i;
+    int name[10];
+    printf("enter the elements\n");
+    for(i=0;i<10;i++)
+    {
+        scanf("%d",&name[i]);
+    }
+    for(i=0;i<10;i++)
+    {
+        printf("%d\t",name[i]);
+    }
+}
