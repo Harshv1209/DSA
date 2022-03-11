@@ -1,0 +1,16 @@
+int main()
+{
+    int i=0;
+    int name[10];
+    printf("enter the elements\n");
+    for( i=0;i<10;i++)
+    {
+        scanf("%d",&name[i]);
+    }
+ i=0;
+    while(i<10)
+    {
+        printf("%d\t",name[i]);
+        i++;
+    }
+}
