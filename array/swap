@@ -1,0 +1,10 @@
+int main()
+{
+    int a=2,b=100,c;
+    printf("before swapping a is %d and b is %d\n",a,b);
+    c=a;
+    a=b;
+    b=c;
+
+    printf("  after swapping a is %d and b is %d",a,b);
+}
