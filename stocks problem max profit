@@ -1,0 +1,22 @@
+
+
+int maxProfit(int* arr, int n){
+int min=INT_MAX;
+    int currprofit=0;
+    int perprofit=0;
+    for(int i=0;i<n;i++)
+    {
+        if (arr[i]<min)
+        {  min=arr[i];
+        }
+        if(arr[i]>min)
+        {
+            currprofit=arr[i]-min;
+        }
+        if(currprofit>perprofit)
+        {
+            perprofit=currprofit;
+        }
+        
+    }return perprofit;
+}
