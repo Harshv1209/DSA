@@ -1,0 +1,19 @@
+int Solution::maxSubArray(const vector<int> &arr) {
+        int currsum= -1e8;
+    int maxsum= -1e8;
+    for(int i=0;i<arr.size();i++)
+    {
+        if(arr[i]>arr[i]+currsum)
+        {
+            currsum=arr[i];
+        }
+        else
+        {
+            currsum=currsum+arr[i];
+        }
+        if(currsum>maxsum)
+        {
+            maxsum=currsum;
+        }
+    }return maxsum; 
+}
