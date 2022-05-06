@@ -1,0 +1,12 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+ map<int,string> sir;
+    sir[1]="harsh";
+    sir[2]="akash";
+    sir[3]="hitika";
+    cout<<sir[2]<<endl;
+    
+   
+}
