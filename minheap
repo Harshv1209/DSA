@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+   priority_queue<int,vector<int>,greater<int>> deq;
+    deq.push(11);
+    deq.push(24);
+    deq.push(83);
+    deq.push(14);
+    int n=deq.size();
+   deq.pop();
+    deq.pop();
+    cout<<deq.top()<<endl;
+    cout<<deq.size()<<endl;
+    cout<<deq.empty()<<endl;
+    cout<<n<<endl;
+    
+   
+}
