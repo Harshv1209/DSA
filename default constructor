@@ -1,0 +1,15 @@
+
+class person{
+    public:
+ 
+  person(){
+       cout<<"hello";
+    }
+
+};
+int main() {
+   person h;
+//person();
+
+    
+}
