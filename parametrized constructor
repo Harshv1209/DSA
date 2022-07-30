@@ -1,0 +1,17 @@
+
+class person{
+    public:
+ 
+  person(int a){
+       cout<<"hello";
+    }
+  person(char b){
+        cout<<"hey";
+    }
+    
+};
+int main() {
+   person h(2);
+
+    
+}
