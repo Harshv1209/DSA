@@ -1,0 +1,24 @@
+class a{
+    public:
+    a(){
+        cout<<10;
+    }
+    
+};
+class b : public a{
+    using a::a;
+    public:
+    
+    
+    
+};
+class  c: public  b{
+    using b::b;
+    public:
+    
+
+};
+int main()
+{
+    c clone;
+}
