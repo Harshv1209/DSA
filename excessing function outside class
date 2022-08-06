@@ -1,0 +1,11 @@
+class A{
+    public:
+    void show();
+};
+void A:: show(){
+    cout<<"this is me";
+}
+int main(){
+    A ob;
+    ob.show();
+}
