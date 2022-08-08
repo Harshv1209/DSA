@@ -1,0 +1,30 @@
+class base{
+    public:
+    void sound(){
+        cout<<"hey"<<endl;
+    }
+    protected:
+    void name(){
+        cout<<"harsh"<<endl;
+    }
+    private:
+    void subname(){
+        cout<<"vaidya"<<endl;
+    }
+    
+    
+};
+class derived:public base{
+
+    
+};
+
+
+
+int main() {
+    derived ob;
+    ob.sound();
+     ob.name();
+     ob.subname();
+    
+}
