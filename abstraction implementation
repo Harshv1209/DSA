@@ -1,0 +1,20 @@
+class power{
+    public:
+  virtual void sound(){
+    cout<<"abstract implementation"<<endl;
+}
+
+};
+class on:public power{
+    public:
+    void sound(){
+        cout<<"abstract class"<<endl;
+    }
+    
+};
+int main(){
+    on phn;
+    phn.sound();
+    
+    
+}
