@@ -1,0 +1,38 @@
+class animal{
+    public://remove virtual keyword for non virtual implementation
+  virtual void sound(){
+    cout<<"animal"<<endl;
+}
+
+};
+class dog:public animal{
+    public:
+    void sound(){
+        cout<<"dog barks"<<endl;
+    }
+    
+};
+class lion:public animal{
+    public:
+    void sound(){
+        cout<<"lion roars"<<endl;
+    }
+    
+};
+class cat:public animal{
+    public:
+    void sound(){
+        cout<<"cat meows"<<endl;
+    }
+    
+};
+int main(){
+animal *ani;
+    lion l;
+    cat c;
+    dog d;
+    ani=&c;
+    ani->sound();
+    
+    
+}
