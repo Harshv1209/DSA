@@ -1,0 +1,59 @@
+class sir{
+    public:
+    string name="sir";
+    int age=0;
+    long long int phone=1234567890;
+    void display();
+    virtual void show(){
+        cout<<name<<" "<<age<<" "<<phone<<endl;
+    }
+    
+};
+class kuldeep:public sir{
+    public:
+    string name=" kuldeep sir";
+    int age=25;
+    long long int phone=1234567890;
+    void show(){
+        cout<<name<<" "<<age<<" "<<phone<<endl;
+    }
+    
+};
+class paul:public sir{
+    public:
+    string name=" paul sir";
+    int age=40;
+    long long int phone=1234567890;
+    virtual void show(){
+        cout<<name<<" "<<age<<" "<<phone<<endl;
+    }
+    
+};
+class zishan:public sir{
+    public:
+    string name=" zishan sir";
+    int age=30;
+    long long int phone=1234567890;
+    virtual void show(){
+        cout<<name<<" "<<age<<" "<<phone<<endl;
+    }
+    
+};
+void display(sir *a)
+{
+    for(int i=0;i<5;i++){
+        a->show();
+    }
+    cout<<endl;
+}
+int main(){
+    sir *a;
+    kuldeep k;
+    zishan z;
+    paul p;
+    display(&k);
+    display(&p);
+    display(&z);
+    
+
+}
