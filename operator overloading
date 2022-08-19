@@ -13,7 +13,7 @@ class fal{
     fal operator+ (fal ob){
         fal harshit;
         harshit.aam=aam+ob.aam;
-         harshit.kela=aam+ob.kela;
+         harshit.kela=kela+ob.kela;
         return harshit;
     }
 };
