@@ -1,0 +1,27 @@
+class fal{
+    public:
+    int aam;
+    int kela;
+   // fal(){}
+    
+      //fal(int aam,int kela){
+    void add(int aam,int kela){
+        this->aam=aam;
+        this->kela=kela;
+    }
+   
+    fal operator+ (fal ob){
+        fal harshit;
+        harshit.aam=aam+ob.aam;
+         harshit.kela=aam+ob.kela;
+        return harshit;
+    }
+};
+int main(){
+    fal akash={2,1};
+    fal hitika={2,0};
+    fal anand;
+    anand=akash+hitika;
+    cout<<anand.aam<<" "<<anand.kela;
+  
+}
