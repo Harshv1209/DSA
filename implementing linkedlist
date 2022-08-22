@@ -1,0 +1,47 @@
+class train{
+    public:
+    int data;
+    train* node;
+    
+};
+int main(){
+    train*head;
+    train*tail;
+    
+    train* bogi1=new train();
+    bogi1->data=1;
+    bogi1->node = NULL;
+    head=bogi1;
+    
+     train* bogi2=new train();
+    bogi2->data=2;
+    bogi2->node = NULL;
+     bogi1->node=bogi2;
+    
+     
+     train* bogi3=new train();
+    bogi3->data=3;
+    bogi3->node= NULL;
+     bogi2->node=bogi3;
+    
+     
+     train* bogi4=new train();
+    bogi4->data=4;
+    bogi4->node=NULL;
+     bogi3->node=bogi4;
+     
+     train* bogi5=new train();
+    bogi5->data=5;
+    bogi5->node= NULL;
+     bogi4->node=bogi5;
+    tail=bogi5;
+    while(head!=NULL){
+        cout<<head->data;
+        cout<<endl;
+        head=head->node;
+        
+        
+    }
+    
+    
+}
