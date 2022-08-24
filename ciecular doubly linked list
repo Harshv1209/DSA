@@ -1,0 +1,55 @@
+class node{
+    public:
+    int data;
+    node* next;
+    node* prev;
+    node(int x){
+        data=x;
+        next = NULL;
+        prev=NULL;
+    }
+};
+int main(){
+    node* head;
+    node* tail;
+    bool first=true;
+    int h;cin>>h;
+    for(int i=0;i<h;i++){
+        int n;
+        cin>>n;
+        node* temp=new node(n);
+        if(first==true){
+            head=temp;
+            tail=temp;
+        
+            first=false;
+        }
+        else{
+            tail->next=temp;
+            temp->prev=tail;
+            tail=temp;
+        }
+    
+    }
+    
+    // cout<<tail->next;
+    // this if for circular linked list 
+    tail->next=head;
+    head->prev=tail;
+    
+    
+//     while(head != NULL)
+//     {
+//         cout<<head->data<<endl;
+//         head=head->next;
+        
+//     }
+    while(tail!=NULL){
+        cout<<tail->data<<endl;
+        tail=tail->prev;
+    }
+    
+    
+    
+
+}
