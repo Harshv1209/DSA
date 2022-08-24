@@ -1,0 +1,37 @@
+class node{
+    public:
+    int data;
+    node* next;
+    node(int x){
+        data=x;
+    }
+};
+int main(){
+    node* head;
+    node* tail;
+    bool first=true;
+    int h;cin>>h;
+    for(int i=0;i<h;i++){
+        int n;
+        cin>>n;
+        node* temp=new node(n);
+        if(first==true){
+            head=temp;
+            tail=temp;
+            first=false;
+        }
+        else{
+            tail->next=temp;
+            tail=temp;
+        }
+    
+    }
+    
+    
+    for(int i=0;i<h;i++){
+        cout<<head->data<<endl;
+        head=head->next;
+    }
+    
+
+}
