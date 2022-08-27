@@ -1,0 +1,91 @@
+class node{
+    public:
+    int data;
+    node* next;
+    node(int x){
+        data=x;
+        next=NULL;
+        
+    }
+};
+int main(){
+
+    node* newnode;
+    node* head;
+    node* tail;
+    bool first=true;
+    int h;cin>>h;
+    
+    for(int i=0;i<h;i++){
+        int n;
+        cin>>n;
+        node* temp=new node(n);
+        if(first==true){
+            head=temp;
+            tail=temp;
+            first=false;
+        }
+        else{
+            tail->next=temp;
+            tail=temp;
+        }
+    
+    }
+    //for insertion at first
+    node *add=new node(6);
+    add->next=head;
+    head=add;
+      //for insertion at last
+    node *last=new node(9);
+    tail->next=last;
+    tail=last;
+    
+        int cnt=0;
+
+     
+    
+    
+   node* temp = head;
+    
+    while(head != NULL){
+        cnt++;
+        // cout<<head->data<<endl;
+        head=head->next;
+   
+    }
+    
+
+    int m = cnt/2;
+    int b=1;
+    head=temp;
+    //for insertion at middle
+  
+    while(head!=NULL){
+
+
+        if(b==m){
+             node *mid=new node(69);
+            mid->next=head->next;
+            head->next=mid;
+            
+            break;
+            }
+        else{
+                b++;
+            head=head->next;
+            
+        }   
+    }
+
+    
+    head=temp;
+    
+       while(head != NULL){
+    
+        cout<<head->data<<endl;
+        head=head->next;
+   
+    }
+    
+
+}
