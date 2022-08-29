@@ -1,0 +1,86 @@
+
+
+class node{
+    public:
+    int data;
+    node* next;
+    node(int x){
+        data=x;
+        next=NULL;
+        
+    }
+};
+
+void print(node* head)
+{
+    while(head != NULL)
+    {
+        cout<<head->data<<endl;
+        head = head->next;
+    }
+    
+    cout<<endl<<endl;
+}
+int main(){
+
+
+    node* head;
+    node* tail;
+    bool first=true;
+    int h;cin>>h;
+    int count=0;
+    
+    for(int i=0;i<h;i++){
+        int n;
+        cin>>n;
+        count++;
+        node* temp=new node(n);
+        if(first==true){
+            head=temp;
+            tail=temp;
+            first=false;
+        }
+        else{
+            tail->next=temp;
+            tail=temp;
+        }
+    
+    }
+    int mid=count/2;
+    // cout<<mid<<endl;
+
+    node* temp;
+  // head=temp;
+    temp=head;
+
+    head=head->next;
+    
+// temp=head;
+
+        int b=1;
+     
+    
+    
+head=temp;
+    while(head!=NULL){
+          
+        b++;
+        if(head->next==tail){
+            head->next=NULL; 
+        }
+        else if(head==temp){
+        head=head->next; }
+        else if(b==mid){ //change the mid into numbers to remove that position
+            head->next=head->next->next;
+        }
+        
+        else{
+            cout<<head->data<<endl;
+        head=head->next;
+        }
+    
+    }
+
+    
+
+}
