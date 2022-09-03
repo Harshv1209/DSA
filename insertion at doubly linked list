@@ -1,0 +1,69 @@
+
+class node{
+    public:
+    int data;
+    node* next;
+    node* prev;
+    node(int x){
+        data=x;
+        next = NULL;
+        prev=NULL;
+    }
+};
+int main(){
+    node* head;
+    node* tail;
+    bool first=true;
+    int h;cin>>h;
+    for(int i=0;i<h;i++){
+        int n;
+        cin>>n;
+        node* temp=new node(n);
+        if(first==true){
+            head=temp;
+            tail=temp;
+        
+            first=false;
+        }
+        else{
+            tail->next=temp;
+            temp->prev=tail;
+            tail=temp;
+        }
+    
+    }
+int mid=h/2;
+    int b=-1;
+      node *add=new node(6);
+    add->next=head;
+    // tail=add->prev;
+    head=add;
+    
+       node *last=new node(9);
+    tail->next=last;
+    
+    
+    
+    while(head != NULL)
+    { 
+        b++;
+        if(b==mid){
+            node* m=new node(69);
+                 m->next=head->next;
+            head->next=m;
+        }
+        
+        cout<<head->data<<endl;
+        head=head->next;
+        
+    }
+
+    
+//     while(tail!=NULL){
+//         cout<<tail->data<<endl;
+//         tail=tail->prev;
+//     }
+}
+    
+    
+    
