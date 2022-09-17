@@ -28,6 +28,24 @@ void postorder(node* akash){
     postorder(akash->right);
         cout<<akash->data<<" ";
 }
+void levelorder(node* root)
+{
+    queue<node*> q;
+    
+    q.push(root);
+    
+    
+    while(q.size())
+    {
+        node* root = q.front();
+        
+        if(root->left) q.push(root->left);
+        if(root->right) q.push(root->right);
+        
+        cout<<root->data<<" ";
+        q.pop();
+    }
+}
 int main() {
     node *a=new node(1);
     node *b=new node(2);
@@ -36,13 +54,27 @@ int main() {
     node *e=new node(5);
     node *f=new node(6);
     node *g=new node(7);
+    //first tree
+    //    a->left=b;
+    // a->right=c;
+    // b->left=d;
+    // b->right=e;
+    // c->left=f;
+    // c->right=g;
     
-    a->left=b;
-    a->right=c;
-    b->left=d;
-    b->right=e;
-    c->left=f;
-    c->right=g;
+    // a->left=b;
+    // a->right=f;
+    // b->left=c;
+    // c->right=d;
+    // d->left=g;
+    // d->right=e;
+    
+    a->right=b;
+    b->right=c;
+    c->right=d;
+    d->right=e;
+    e->right=f;
+    f->right=g;
     cout<<"preorder:  ";
     preorder(a);
     cout<<endl;
@@ -51,5 +83,7 @@ int main() {
     cout<<endl;
      cout<<"postorder:  ";
     postorder(a);
-  
+    cout<<endl;
+    cout<<"levelorder: ";
+    levelorder(a);
 }
